@@ -1,7 +1,8 @@
 <template>
 <div class="wrapper">
-<swiper :options="swiperOption">
-<swiper-slide v-for="item of swiperList" :key="item.id">
+<swiper :options="swiperOption" v-if="showSwiper">
+  <!--  v-if="list.length默认显示为为第1张 -->
+<swiper-slide v-for="item of list" :key="item.id">
 <img class="swiper-img" :src="item.imgUrl">
 </swiper-slide>
 <div class="swiper-pagination" slot="pagination"></div>
@@ -12,23 +13,21 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         // 循环轮播
         loop: true
-      },
-      swiperList: [
-        {
-          id: '0001',
-          imgUrl: '//img1.qunarzz.com/vc/80/80/1a/72b8f423c33e581ca72fc136da.jpg'
-        },
-        {
-          id: '0002',
-          imgUrl: '//img1.qunarzz.com/vc/d3/79/22/687da305c0ea0532a2c7d3cc23.jpg'
-        }
-      ]
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }

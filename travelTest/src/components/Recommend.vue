@@ -3,7 +3,7 @@
     <div class="title">热销推荐</div>
     <div>
       <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
           <img class="item-img" :src="item.imgUrl">
           <div class="item-info">
             <p class="item-title">{{item.title}}</p>
@@ -19,32 +19,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://imgs.qunarzz.com/p/tts5/1803/52/f0bdeb873d1a3402.jpg_r_390x260x90_e9ac2738.jpg',
-          title: '大连圣亚海洋世界',
-          desc: '浪漫大连首站，浪漫的海洋主题乐园'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/201403/07/30b534b0de51ccac2906bcb6ba159988.jpg_256x160_5bd39fbd.jpg',
-          title: '长隆野生动物世界',
-          desc: '熊猫三胞胎，与您共享欢乐时光'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1707/88/889ae02b07140066a3.img.jpg_256x160_097bc893.jpg',
-          title: '长隆欢乐世界',
-          desc: '垂直过山车等挑战你的青春荷尔蒙'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
