@@ -2,10 +2,9 @@
   <div id="app">
     <home-header></home-header>
     <home-swiper></home-swiper>
-<<<<<<< HEAD
-=======
     <home-icons></home-icons>
->>>>>>> origin/index-icons
+    <home-recommend></home-recommend>
+    <home-weekend></home-weekend>
     <router-view/>
   </div>
 </template>
@@ -13,21 +12,18 @@
 <script>
 import HomeHeader from '@/components/Header'
 import HomeSwiper from '@/components/Swiper'
-<<<<<<< HEAD
-=======
 import HomeIcons from '@/components/Icons'
->>>>>>> origin/index-icons
+import HomeRecommend from '@/components/Recommend'
+import HomeWeekend from '@/components/Weekend'
 
 export default {
   name: 'App',
   components: {
     HomeHeader,
-<<<<<<< HEAD
-    HomeSwiper
-=======
     HomeSwiper,
-    HomeIcons
->>>>>>> origin/index-icons
+    HomeIcons,
+    HomeRecommend,
+    HomeWeekend
   }
 }
 </script>
