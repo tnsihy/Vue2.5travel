@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import City from '@/components/city/City'
+import City from '@/components/City'
 
 Vue.use(Router)
 
