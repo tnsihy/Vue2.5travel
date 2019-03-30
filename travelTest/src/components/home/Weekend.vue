@@ -35,10 +35,11 @@ export default {
     text-align left
     text-indent 0.4rem
     background #eee
+    font-size .3rem
 .item-img-wrapper
     overflow hidden
     height 0
-    padding-bottom 60%
+    padding-bottom 36%
     .item-img
         width 100%
 .item-info
@@ -47,7 +48,7 @@ export default {
     text-align left
     .item-title
         line-height 0.5rem
-        font-size 0.32rem
+        font-size 0.3rem
         ellipsis()
     .item-desc
         line-height 0.5rem

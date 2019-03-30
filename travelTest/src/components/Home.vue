@@ -38,7 +38,6 @@ export default {
     getHomeInfo () {
       axios.get('/api/index.json')
         .then(this.getHomeInfoSucc)
-        .catch('错误')
     },
     getHomeInfoSucc (res) {
       res = res.data

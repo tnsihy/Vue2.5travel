@@ -35,6 +35,7 @@ export default {
   text-align left
   text-indent 0.4rem
   background #eee
+  font-size .3rem
 .item
   display flex
   height 1.9rem
@@ -50,7 +51,7 @@ export default {
     padding 0.1rem
     .item-title
       line-height 0.54rem
-      font-size 0.32rem
+      font-size 0.3rem
       text-align left
       text-indent 0.1rem
       ellipsis()

@@ -80,4 +80,5 @@ export default {
       line-height 0.6rem
       color $darkTestColor
       ellipsis()
+      font-size .28rem
 </style>
