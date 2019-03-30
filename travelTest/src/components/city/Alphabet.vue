@@ -70,6 +70,8 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
+*
+  touch-action pan-y
 .list
     display flex
     flex-direction column
