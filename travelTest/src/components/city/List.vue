@@ -22,13 +22,16 @@
         </div>
         </div>
 
-        <div class="area" v-for="(item,key) of cities" :key="key" :ref="key">
+        <div class="area"
+        v-for="(item,key) of cities"
+        :key="key"
+        :ref="key">
         <div class="title border-topbottom">{{key}}</div>
-        <div class="item-list"
+        <div class="item-list">
+            <div class="item border-bottom"
             v-for="innerItem of item"
             :key="innerItem.id"
-            @click="handleCityClick(innerItem.name)">
-            <div class="item border-bottom">{{innerItem.name}}</div>
+            @click="handleCityClick(innerItem.name)">{{innerItem.name}}</div>
         </div>
         </div>
     </div>
@@ -40,11 +43,7 @@ import Bscroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'CityList',
-  props: {
-    hot: Array,
-    cities: Object,
-    letter: String
-  },
+  props: ['hot', 'letter', 'cities'],
   computed: {
     ...mapState({
       currentCity: 'city'
