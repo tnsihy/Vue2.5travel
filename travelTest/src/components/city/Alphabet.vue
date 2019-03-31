@@ -1,18 +1,16 @@
 <template>
-    <div>
-        <ul class="list">
-            <li class="item"
-              v-for="item of letters"
-              :key="item"
-              @click="handleLetterClick"
-              @touchstart.prevent = "handleTouchStart"
-              @touchmove = "handleTouchMove"
-              @touchend = "handleTouchEnd"
-              :ref = 'item'
-            >{{item}}
-            </li>
-        </ul>
-    </div>
+  <ul class="list">
+      <li class="item"
+        v-for="item of letters"
+        :key="item"
+        @click="handleLetterClick"
+        @touchstart.prevent = "handleTouchStart"
+        @touchmove = "handleTouchMove"
+        @touchend = "handleTouchEnd"
+        :ref = 'item'
+      >{{item}}
+      </li>
+  </ul>
 </template>
 
 <script>
@@ -42,7 +40,7 @@ export default {
   },
   methods: {
     handleLetterClick (e) {
-      this.$emit('change', e.target.innerHTML)
+      this.$emit('change', e.target.innerText)
     },
     handleTouchStart () {
       this.touchStatus = true
