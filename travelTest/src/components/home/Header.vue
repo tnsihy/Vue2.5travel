@@ -36,9 +36,10 @@ export default {
   .header-left
     width 0.64rem
     float left
+    margin-top .1rem
   .header-input
     flex 1
-    margin-top 0.12rem
+    margin-top 0.2rem
     height 0.64rem
     line-height 0.64rem
     margin-left 0.2rem
