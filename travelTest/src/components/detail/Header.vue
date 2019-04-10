@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link tag="div" to="/  " class="header-abs" v-show="showAbs">
+    <router-link tag="div" to="/" class="header-abs" v-show="showAbs">
       <span class="iconfont header-abs-back">&#xe624;</span>
     </router-link>
 
@@ -38,7 +38,16 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
+  // activated () {
+  //   window.addEventListener('scroll', this.handleScroll)
+  // },
+  // deactivated () {
+  //   window.removeEventListener('scroll', this.handleScroll)
+  // }
 }
 </script>
 
