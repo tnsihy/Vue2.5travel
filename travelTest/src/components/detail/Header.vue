@@ -36,18 +36,18 @@ export default {
       }
     }
   },
-  mounted () {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
-  }
-  // activated () {
+  // mounted () {
   //   window.addEventListener('scroll', this.handleScroll)
   // },
-  // deactivated () {
+  // destroyed () {
   //   window.removeEventListener('scroll', this.handleScroll)
   // }
+  activated () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
 }
 </script>
 

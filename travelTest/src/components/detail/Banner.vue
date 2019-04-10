@@ -3,17 +3,17 @@
     <div class="banner" @click="handleBannerClick">
       <img
         class="banner-img"
-        src="https://imgs.qunarzz.com/p/tts7/1705/cf/685989276021f702.jpg_r_390x260x90_4e0f60f3.jpg"
+        :src="bannerImg"
       >
       <div class="banner-info">
-        <div class="banner-title">大连圣亚海洋世界(AAAA景区)</div>
+        <div class="banner-title">{{this.sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe615;</span>
-          39
+          {{this.gallaryImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleBannerClose"></common-gallary>
+    <common-gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleBannerClose"></common-gallary>
   </div>
 </template>
 
@@ -21,12 +21,14 @@
 import CommonGallary from '@/components/common/gallary/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
   data () {
     return {
-      showGallary: false,
-      imgs: ['https://imgs.qunarzz.com/p/tts7/1705/cf/685989276021f702.jpg_r_390x260x90_4e0f60f3.jpg',
-        'https://imgs.qunarzz.com/p/tts8/1604/50/143379bc0221c2f7.jpg_r_390x260x90_6c731f40.jpg',
-        'https://imgs.qunarzz.com/vs_ceph_vs_tts/52342bc8-765b-4aa8-b26c-3c3bf8eb184a.jpg_r_390x260x90_369bf229.jpg']
+      showGallary: false
     }
   },
   components: {
